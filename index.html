@@ -1,54 +1,152 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Página Simples</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lexi ia</title>
   <style>
-    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#22d3ee; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:linear-gradient(180deg,#0b1220,#0f172a);color:var(--text);}
-    .wrap{max-width:960px;margin:0 auto;padding:32px 20px}
-    header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}
-    header h1{font-size:clamp(22px,3vw,30px);margin:0}
-    nav a{color:var(--text);text-decoration:none;margin-right:14px;opacity:.8}
-    nav a:hover{opacity:1}
-    .card{background:linear-gradient(180deg,#0c1220,#0d1426);border:1px solid #1f2937;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    h2{font-size:clamp(18px,2.2vw,24px);margin:0 0 8px}
-    p{line-height:1.6;color:var(--muted);margin:0 0 14px}
-    .btn{display:inline-block;padding:10px 16px;border-radius:12px;border:1px solid #2dd4bf;background:linear-gradient(180deg,#22d3ee,#14b8a6);color:#062a2a;font-weight:600;cursor:pointer;transition:transform .08s ease,filter .2s}
-    .btn:hover{filter:brightness(1.05)}
-    .btn:active{transform:translateY(1px)}
-    footer{margin-top:28px;opacity:.6;font-size:14px}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+    }
+
+    /* Topo */
+    .header {
+      background: #5EC9F3;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      color: white;
+    }
+
+    /* Subtítulo */
+    .subtitle {
+      color: orange;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+
+    /* Card */
+    .card {
+      background: #1E64F0;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-blue {
+      background: #5EC9F3;
+      color: white;
+    }
+
+    .btn-yellow {
+      background: #FFD43B;
+      color: black;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Seção de modelos */
+    #modelos {
+      padding: 50px;
+      background: #111;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Olá, mundo! 👋</h1>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </header><main class="card">
-  <section id="sobre">
-    <h2>Sobre esta página</h2>
-    <p>Este é um exemplo de HTML bem simples com um toque moderno. Você pode editar os textos e usar como base para o seu site.</p>
-    <button class="btn" id="acao">Clique aqui</button>
+  <!-- Header -->
+  <div class="header">
+    <img src="sua-imagem-topo.png" alt="Logo">
+    <h1>Lexi ia</h1>
+  </div>
+
+  <!-- Subtítulo -->
+  <p class="subtitle">Modelos de voz dos seus personagens favoritos</p>
+
+  <!-- Card 1 -->
+  <div class="card">
+    <img src="modelo1.png" alt="Modelo 1">
+    <div class="buttons">
+      <button class="btn btn-blue" onclick="window.location.href='#modelos'">Ver modelo</button>
+      <button class="btn btn-yellow" onclick="copiarID('ID-MODELO-1')">Copiar ID</button>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <img src="modelo2.png" alt="Modelo 2">
+    <div class="buttons">
+      <button class="btn btn-blue" onclick="window.location.href='#modelos'">Ver modelo</button>
+      <button class="btn btn-yellow" onclick="copiarID('ID-MODELO-2')">Copiar ID</button>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="modelo3.png" alt="Modelo 3">
+    <div class="buttons">
+      <button class="btn btn-blue" onclick="window.location.href='#modelos'">Ver modelo</button>
+      <button class="btn btn-yellow" onclick="copiarID('ID-MODELO-3')">Copiar ID</button>
+    </div>
+  </div>
+
+  <!-- Seção de modelos -->
+  <section id="modelos">
+    <h2>Seção de Modelos</h2>
+    <p>Aqui você pode listar mais detalhes dos modelos de voz escolhidos.</p>
   </section>
-</main>
 
-<footer>
-  Feito com ♥ por você — <span id="ano"></span>
-</footer>
-
-  </div>  <script>
-    // Interação simples
-    document.getElementById('acao').addEventListener('click', function(){
-      alert('Funcionou! 😀');
-    });
-    // Atualiza o ano
-    document.getElementById('ano').textContent = new Date().getFullYear();
-  </script></body>
+  <script>
+    function copiarID(id) {
+      navigator.clipboard.writeText(id).then(() => {
+        alert("ID copiado: " + id);
+      });
+    }
+  </script>
+</body>
 </html>
