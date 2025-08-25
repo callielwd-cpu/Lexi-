@@ -10,10 +10,9 @@
       font-family: Arial, sans-serif;
       background: #000;
       color: white;
-      text-align: center;
     }
 
-    /* Topo */
+    /* Header */
     .header {
       background: #5EC9F3;
       padding: 30px;
@@ -40,29 +39,97 @@
       color: orange;
       font-weight: bold;
       margin: 30px 0;
+      text-align: center;
     }
 
-    /* Card */
+    /* Card estilo novo */
     .card {
-      background: #1E64F0;
+      background: #1a1a1d;
       border-radius: 15px;
-      padding: 20px;
+      padding: 15px;
       margin: 20px auto;
-      max-width: 400px;
+      max-width: 500px;
+      color: #ccc;
+    }
+
+    /* Cabeçalho */
+    .card-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 15px;
     }
 
-    .card img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
+    .card-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-info img {
+      width: 55px;
+      height: 55px;
+      border-radius: 12px;
       object-fit: cover;
     }
 
-    .buttons {
+    .card-info-text h3 {
+      margin: 0;
+      color: white;
+      font-size: 18px;
+    }
+
+    .card-info-text p {
+      margin: 0;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #3b48f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: white;
+    }
+
+    /* Descrição */
+    .card-desc {
+      margin: 15px 0;
+      font-size: 14px;
+      color: #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-desc span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Rodapé */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .tag {
+      background: green;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .footer-buttons {
       display: flex;
       gap: 10px;
     }
@@ -70,24 +137,33 @@
     .btn {
       border: none;
       padding: 10px 15px;
-      border-radius: 10px;
+      border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
+      font-size: 14px;
       transition: 0.3s;
     }
 
-    .btn-blue {
-      background: #5EC9F3;
+    .btn-orange {
+      background: #ff7a00;
       color: white;
     }
 
-    .btn-yellow {
-      background: #FFD43B;
-      color: black;
+    .btn-blue {
+      background: #465bff;
+      color: white;
     }
 
     .btn:hover {
-      opacity: 0.8;
+      opacity: 0.85;
+    }
+
+    .utilizacao {
+      font-size: 14px;
+      color: #aaa;
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
 
     /* Seção de modelos */
@@ -99,6 +175,7 @@
   </style>
 </head>
 <body>
+
   <!-- Header -->
   <div class="header">
     <img src="sua-imagem-topo.png" alt="Logo">
@@ -110,28 +187,79 @@
 
   <!-- Card 1 -->
   <div class="card">
-    <img src="modelo1.png" alt="Modelo 1">
-    <div class="buttons">
-      <button class="btn btn-blue" onclick="window.location.href='#modelos'">Ver modelo</button>
-      <button class="btn btn-yellow" onclick="copiarID('ID-MODELO-1')">Copiar ID</button>
+    <div class="card-header">
+      <div class="card-info">
+        <img src="modelo1.png" alt="Modelo 1">
+        <div class="card-info-text">
+          <h3>Modelo 1</h3>
+          <p>@autor1</p>
+        </div>
+      </div>
+      <div class="check-icon">✔</div>
+    </div>
+    <div class="card-desc">
+      <span>▶ Exemplo de prévia de voz do modelo...</span>
+      <span>11.2K</span>
+    </div>
+    <div class="card-footer">
+      <div class="tag">Pt</div>
+      <div class="footer-buttons">
+        <button class="btn btn-orange" onclick="window.location.href='#modelos'">Ver modelos</button>
+        <button class="btn btn-blue" onclick="copiarID('ID-MODELO-1')">Copiar ID</button>
+      </div>
+      <div class="utilizacao">📊 Utilização</div>
     </div>
   </div>
 
   <!-- Card 2 -->
   <div class="card">
-    <img src="modelo2.png" alt="Modelo 2">
-    <div class="buttons">
-      <button class="btn btn-blue" onclick="window.location.href='#modelos'">Ver modelo</button>
-      <button class="btn btn-yellow" onclick="copiarID('ID-MODELO-2')">Copiar ID</button>
+    <div class="card-header">
+      <div class="card-info">
+        <img src="modelo2.png" alt="Modelo 2">
+        <div class="card-info-text">
+          <h3>Modelo 2</h3>
+          <p>@autor2</p>
+        </div>
+      </div>
+      <div class="check-icon">✔</div>
+    </div>
+    <div class="card-desc">
+      <span>▶ Outro preview de voz incrível...</span>
+      <span>8.5K</span>
+    </div>
+    <div class="card-footer">
+      <div class="tag">Pt</div>
+      <div class="footer-buttons">
+        <button class="btn btn-orange" onclick="window.location.href='#modelos'">Ver modelos</button>
+        <button class="btn btn-blue" onclick="copiarID('ID-MODELO-2')">Copiar ID</button>
+      </div>
+      <div class="utilizacao">📊 Utilização</div>
     </div>
   </div>
 
   <!-- Card 3 -->
   <div class="card">
-    <img src="modelo3.png" alt="Modelo 3">
-    <div class="buttons">
-      <button class="btn btn-blue" onclick="window.location.href='#modelos'">Ver modelo</button>
-      <button class="btn btn-yellow" onclick="copiarID('ID-MODELO-3')">Copiar ID</button>
+    <div class="card-header">
+      <div class="card-info">
+        <img src="modelo3.png" alt="Modelo 3">
+        <div class="card-info-text">
+          <h3>Modelo 3</h3>
+          <p>@autor3</p>
+        </div>
+      </div>
+      <div class="check-icon">✔</div>
+    </div>
+    <div class="card-desc">
+      <span>▶ Mais um preview do modelo...</span>
+      <span>5.9K</span>
+    </div>
+    <div class="card-footer">
+      <div class="tag">Pt</div>
+      <div class="footer-buttons">
+        <button class="btn btn-orange" onclick="window.location.href='#modelos'">Ver modelos</button>
+        <button class="btn btn-blue" onclick="copiarID('ID-MODELO-3')">Copiar ID</button>
+      </div>
+      <div class="utilizacao">📊 Utilização</div>
     </div>
   </div>
 
