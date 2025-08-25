@@ -96,20 +96,19 @@
       color: white;
     }
 
-    /* Descrição */
-    .card-desc {
+    /* Player de áudio */
+    .card-audio {
       margin: 15px 0;
-      font-size: 14px;
-      color: #aaa;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 10px;
     }
 
-    .card-desc span {
-      display: flex;
-      align-items: center;
-      gap: 5px;
+    .card-audio audio {
+      width: 100%;
+      outline: none;
+      border-radius: 8px;
     }
 
     /* Rodapé */
@@ -197,10 +196,14 @@
       </div>
       <div class="check-icon">✔</div>
     </div>
-    <div class="card-desc">
-      <span>▶ Exemplo de prévia de voz do modelo...</span>
-      <span>11.2K</span>
+
+    <div class="card-audio">
+      <audio controls>
+        <source src="audio1.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
     </div>
+
     <div class="card-footer">
       <div class="tag">Pt</div>
       <div class="footer-buttons">
@@ -223,10 +226,14 @@
       </div>
       <div class="check-icon">✔</div>
     </div>
-    <div class="card-desc">
-      <span>▶ Outro preview de voz incrível...</span>
-      <span>8.5K</span>
+
+    <div class="card-audio">
+      <audio controls>
+        <source src="audio2.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
     </div>
+
     <div class="card-footer">
       <div class="tag">Pt</div>
       <div class="footer-buttons">
@@ -249,10 +256,14 @@
       </div>
       <div class="check-icon">✔</div>
     </div>
-    <div class="card-desc">
-      <span>▶ Mais um preview do modelo...</span>
-      <span>5.9K</span>
+
+    <div class="card-audio">
+      <audio controls>
+        <source src="audio3.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
     </div>
+
     <div class="card-footer">
       <div class="tag">Pt</div>
       <div class="footer-buttons">
