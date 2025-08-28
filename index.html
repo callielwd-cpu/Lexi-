@@ -4,211 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Modelos de Áudio da Lexi</title>
-  <style>
-    /* ====== RESET ====== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background: #0f0f0f;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* ====== HEADER ====== */
-    header {
-      width: 100%;
-      position: relative;
-      text-align: center;
-    }
-    header img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-bottom: 3px solid #222;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #0f0f0f 100%);
-    }
-    header h1 {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      color: #a64dff;
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-
-    /* ====== CONTAINER ====== */
-    .container {
-      width: 95%;
-      max-width: 800px;
-      margin-top: 20px;
-    }
-    .container h2 {
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    /* ====== SEARCH BAR ====== */
-    .search-box {
-      display: flex;
-      align-items: center;
-      background: #1a1a1a;
-      border-radius: 8px;
-      padding: 8px 12px;
-      margin: 10px auto 20px auto;
-      width: 100%;
-      max-width: 400px;
-      border: 1px solid #333;
-    }
-    .search-box input {
-      flex: 1;
-      border: none;
-      outline: none;
-      background: transparent;
-      color: #fff;
-      font-size: 1rem;
-    }
-    .search-box i {
-      margin-right: 8px;
-      color: #bbb;
-      font-size: 1.2rem;
-    }
-    .no-results {
-      text-align: center;
-      color: #888;
-      margin-top: 15px;
-      display: none;
-    }
-
-    /* ====== CARD ====== */
-    .card {
-      background: #1a1a1a;
-      border-radius: 20px;
-      padding: 20px;
-      margin: 15px 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .card img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #a64dff;
-    }
-    .card-content {
-      flex: 1;
-    }
-    .card-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-    .card-sub {
-      font-size: 0.9rem;
-      color: #bbb;
-      margin-bottom: 8px;
-    }
-    audio {
-      width: 100%;
-      outline: none;
-    }
-
-    /* ====== BUTTONS ====== */
-    .buttons {
-      display: flex;
-      gap: 10px;
-      margin-top: 8px;
-    }
-    .btn {
-      padding: 6px 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .btn-green { background: #00b050; color: #fff; }
-    .btn-orange { background: #ff9800; color: #fff; }
-    .btn-blue { background: #3b82f6; color: #fff; }
-
-    /* ====== FOOTER ====== */
-    footer {
-      margin: 30px 0;
-      display: flex;
-      gap: 20px;
-    }
-    footer a img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.2s;
-    }
-    footer a img:hover {
-      transform: scale(1.1);
-    }
-
-    /* ====== POPUP ====== */
-    .popup {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.9);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      z-index: 9999;
-      display: none;
-    }
-    .popup h2 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #b600ff;
-      margin-bottom: 15px;
-    }
-    .popup p {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 25px;
-    }
-    .popup button {
-      padding: 15px 30px;
-      border: none;
-      border-radius: 15px;
-      background: #fff;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .close-btn {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #fff;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -229,66 +25,23 @@
     </div>
     <p class="no-results" id="noResults">Nenhum resultado encontrado</p>
 
-    <!-- CARD 1 -->
-    <div class="card">
-      <img src="https://i.ibb.co/tPZm4CJD/images-14.jpg" alt="Perfil">
-      <div class="card-content">
-        <p class="card-title">Putinha 1</p>
-        <p class="card-sub">lulata caro</p>
-        <audio controls>
-          <source src="audio1.mp3" type="audio/mpeg">
-          Seu navegador não suporta áudio.
-        </audio>
-        <div class="buttons">
-          <button class="btn btn-green">Pt</button>
-          <button class="btn btn-orange">Ver modelos</button>
-          <button class="btn btn-blue" onclick="copiarID('ID-Modelo-1')">Copiar ID</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="card">
-      <img src="https://i.ibb.co/tPZm4CJD/images-14.jpg" alt="Perfil">
-      <div class="card-content">
-        <p class="card-title">Modelo 2</p>
-        <p class="card-sub">Outro artista</p>
-        <audio controls>
-          <source src="audio2.mp3" type="audio/mpeg">
-          Seu navegador não suporta áudio.
-        </audio>
-        <div class="buttons">
-          <button class="btn btn-green">Pt</button>
-          <button class="btn btn-orange">Ver modelos</button>
-          <button class="btn btn-blue" onclick="copiarID('ID-Modelo-2')">Copiar ID</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="card">
-      <img src="https://i.ibb.co/tPZm4CJD/images-14.jpg" alt="Perfil">
-      <div class="card-content">
-        <p class="card-title">Modelo 3</p>
-        <p class="card-sub">Outro artista</p>
-        <audio controls>
-          <source src="audio3.mp3" type="audio/mpeg">
-          Seu navegador não suporta áudio.
-        </audio>
-        <div class="buttons">
-          <button class="btn btn-green">Pt</button>
-          <button class="btn btn-orange">Ver modelos</button>
-          <button class="btn btn-blue" onclick="copiarID('ID-Modelo-3')">Copiar ID</button>
-        </div>
-      </div>
+    <!-- IMPORTAÇÃO DOS CARDS -->
+    <div id="cards-container">
+      <!-- Cards serão carregados aqui -->
     </div>
   </div>
 
-  <!-- RODAPÉ COM REDES SOCIAIS -->
+  <!-- RODAPÉ -->
   <footer>
-    <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
-    <a href="https://wa.me/seunumerowa" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/seunumerowa" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+    <a href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+    </a>
   </footer>
 
   <!-- POPUP -->
@@ -299,40 +52,6 @@
     <button onclick="window.location.href='https://discord.com'">Ir para o Discord</button>
   </div>
 
-  <script>
-    function copiarID(id) {
-      navigator.clipboard.writeText(id).then(() => {
-        document.getElementById("popup").style.display = "flex";
-      }).catch(err => {
-        alert("Erro ao copiar ID");
-      });
-    }
-    function fecharPopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-
-    // ====== PESQUISA ======
-    const searchInput = document.getElementById("searchInput");
-    const cards = document.querySelectorAll(".card");
-    const noResults = document.getElementById("noResults");
-
-    searchInput.addEventListener("input", function() {
-      let value = this.value.toLowerCase();
-      let found = false;
-
-      cards.forEach(card => {
-        let title = card.querySelector(".card-title").textContent.toLowerCase();
-        if (title.includes(value)) {
-          card.style.display = "flex";
-          found = true;
-        } else {
-          card.style.display = "none";
-        }
-      });
-
-      noResults.style.display = found ? "none" : "block";
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
