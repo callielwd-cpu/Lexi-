@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "question": "Como criar o <span style=\"color:#9F88F2; font-weight:600;\">áudio</span>?",
+        "answer": "O processo é simples e automatizado:<br><br>1. Navegue pela aba <b>'Todos'</b> ou <b>'Categorias'</b>.<br>2. Ouça a prévia e escolha sua voz favorita.<br>3. Clique em <b>'Copiar ID'</b> no cartão do modelo.<br>4. Vá ao nosso <a href=\"https://wa.me/SEUNUMERO\" target=\"_blank\" style=\"color:#4ade80; font-weight:600;\">Documentação</a> e cole o ID para gerar sua mensagem.",
+        "icon": "whatsapp"
+    },
+    {
+        "id": 2,
+        "question": "O que são os <span style=\"color:#9F88F2; font-weight:600;\">badges</span>?",
+        "answer": "Identificamos a qualidade dos modelos através de selos:<ul style='margin-left:20px; margin-top:10px;'><li><b style='color:#facc15'>V9.7 (Gold)</b>: Qualidade extrema, ultra realista.</li><li><b style='color:#fb923c'>V5.4 (Orange)</b>: Ótima qualidade, muito versátil.</li><li><b style='color:#A78BFA'>Purple</b>: Modelos padrão, rápidos e eficientes.</li></ul>",
+        "icon": "star"
+    },
+    {
+        "id": 3,
+        "question": "Reportar um <span style=\"color:#F54748; font-weight:600;\">problema</span>",
+        "answer": "Se um modelo não estiver funcionando ou o áudio estiver com falhas, por favor entre em contato com o suporte técnico imediatamente informando o ID do modelo. Use a busca desta aba para localizar o ID se necessário.",
+        "icon": "bug"
+    },
+    {
+        "id": 4,
+        "question": "Planos e Preços",
+        "answer": "Atualmente oferecemos planos gratuitos e premium. Visite o bot oficial para ver a tabela atualizada digitando /planos.",
+        "icon": "sack-dollar"
+    }
+]
